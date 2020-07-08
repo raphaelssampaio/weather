@@ -1,26 +1,25 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Text } from 'react-native'
 import { colors } from '../styles'
 import Card from '../components/Card'
-
-import { twentyTwenty, twentyTen, twoThousand, allTime } from '../assets'
-import { TWENTY_TWENTY, TWENTY_TEN, TWO_THOUSAND, ALL_TIME } from '../constants'
+import { sun } from '../assets'
 
 export default class Main extends React.Component {
-  constructor() {
-    super()
-  }
-
   render() {
+    const data = 'quente pra caramba'
+    const city = 'Fortaleza'
+
     return (
       <View style={styles.default}>
-        <View style={styles.container}>
-          <Card title={TWENTY_TWENTY} picture={twentyTwenty} />
-          <Card title={TWENTY_TEN} picture={twentyTen} />
+        <View style={{ marginTop: 20 }}>
+          <Text style={styles.welcome}>
+            React Native Test Platform Builders
+          </Text>
+          <Text style={styles.welcome}>App Weather</Text>
+          <Text style={styles.raphael}>by Raphael Sampaio</Text>
         </View>
         <View style={styles.container}>
-          <Card title={TWO_THOUSAND} picture={twoThousand} />
-          <Card title={ALL_TIME} picture={allTime} />
+          <Card city={city} data={data} picture={sun} />
         </View>
       </View>
     )
@@ -35,11 +34,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   welcome: {
-    fontSize: 28,
+    fontSize: 20,
     color: colors.white,
+    textAlign: 'center',
+  },
+  raphael: {
+    fontSize: 20,
+    color: colors.white,
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   container: {
-    flex: 1,
+    marginTop: 20,
     flexDirection: 'row',
     backgroundColor: colors.background,
     justifyContent: 'center',

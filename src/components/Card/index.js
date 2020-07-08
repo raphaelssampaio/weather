@@ -1,21 +1,24 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import { Image, Text, Button } from 'react-native-elements'
-import { isIphoneX } from 'react-native-iphone-x-helper'
+import { View, StyleSheet, Image } from 'react-native'
+import { Text, Button } from 'react-native-elements'
 
 import { colors } from '../../styles'
-import { SEE_MORE } from '../../constants'
+import { REFRESH } from '../../constants'
 
-export default function Card({ title, picture }) {
+export default function Card({ city, data, picture }) {
   return (
     <View style={styles.shadow}>
       <View style={styles.container}>
-        <Text style={styles.titleStyle}>{title}</Text>
-        <Image style={styles.photo} resizeMode="cover" source={picture} />
+        <Image source={picture} style={styles.image} resizeMode="cover" />
+        <Text style={styles.titleStyle}>{city}</Text>
+        <Text style={styles.titleStyle}>Temperatura: {data}</Text>
+        <Text style={styles.titleStyle}>Clima: {data}</Text>
+
         <Button
-          title={SEE_MORE}
+          title={REFRESH}
           titleStyle={styles.buttonTitleStyle}
           buttonStyle={styles.buttonStyle}
+          containerStyle={styles.buttonContainerStyle}
         />
       </View>
     </View>
@@ -32,9 +35,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   container: {
-    justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+    minWidth: 300,
+    minHeight: 500,
     backgroundColor: colors.cardBackground,
   },
   titleStyle: {
@@ -54,10 +58,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginVertical: 5,
   },
-  photo: {
-    height: isIphoneX() ? 180 : 160,
-    width: isIphoneX() ? 180 : 160,
-    borderRadius: 10,
-    marginHorizontal: 5,
+  buttonContainerStyle: {
+    width: '90%',
+  },
+  image: {
+    height: 180,
+    width: 180,
   },
 })

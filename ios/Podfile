@@ -77,7 +77,7 @@ target 'Weather' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'MoviesTests' do
+  target 'WeatherTests' do
     inherit! :complete
     # Pods for testing
   end
