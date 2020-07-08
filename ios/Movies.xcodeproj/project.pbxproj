@@ -12,8 +12,8 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5541E6B84B4041B484533B4D /* libPods-Movies-MoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAB0C5D3E908614F0672088 /* libPods-Movies-MoviesTests.a */; };
-		97FC6FD78F5826903A73609A /* libPods-Movies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553E798963FE7542783D96E5 /* libPods-Movies.a */; };
+		5541E6B84B4041B484533B4D /* libPods-Weather-MoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAB0C5D3E908614F0672088 /* libPods-Weather-MoviesTests.a */; };
+		97FC6FD78F5826903A73609A /* libPods-Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553E798963FE7542783D96E5 /* libPods-Weather.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +22,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Movies;
+			remoteInfo = Weather;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,25 +31,25 @@
 		00E356EE1AD99517003FC87E /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MoviesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesTests.m; sourceTree = "<group>"; };
-		0AC0F0582159E35F0B098333 /* libPods-Movies-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movies-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B53B979E69F49545B064502 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Movies/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Movies/AppDelegate.m; sourceTree = "<group>"; };
+		0AC0F0582159E35F0B098333 /* libPods-Weather-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B53B979E69F49545B064502 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Weather/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Weather/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Movies/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Movies/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Movies/main.m; sourceTree = "<group>"; };
-		301ACDC716AAF11EBD611087 /* Pods-Movies-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Movies-tvOSTests/Pods-Movies-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		33D90D4EA6DC27C8E9594651 /* Pods-Movies-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Movies-tvOS/Pods-Movies-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		44A4E6D03BB260BB2A9AD94C /* Pods-Movies-MoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-MoviesTests.release.xcconfig"; path = "Target Support Files/Pods-Movies-MoviesTests/Pods-Movies-MoviesTests.release.xcconfig"; sourceTree = "<group>"; };
-		479CF187C62F62B043D61A8B /* Pods-Movies-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Movies-tvOSTests/Pods-Movies-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		553E798963FE7542783D96E5 /* libPods-Movies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1184C6BF68A7618A0B4BF72 /* Pods-Movies-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Movies-tvOS/Pods-Movies-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BAAB0C5D3E908614F0672088 /* libPods-Movies-MoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movies-MoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAF253CBE85E381911CA1EB9 /* libPods-Movies-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movies-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD17DF2FED762EF344D53BBF /* Pods-Movies-MoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-MoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-Movies-MoviesTests/Pods-Movies-MoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E5E6A79F070300615288183B /* Pods-Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.debug.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Weather/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Weather/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Weather/main.m; sourceTree = "<group>"; };
+		301ACDC716AAF11EBD611087 /* Pods-Weather-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Weather-tvOSTests/Pods-Weather-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33D90D4EA6DC27C8E9594651 /* Pods-Weather-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Weather-tvOS/Pods-Weather-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		44A4E6D03BB260BB2A9AD94C /* Pods-Weather-MoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-MoviesTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-MoviesTests/Pods-Weather-MoviesTests.release.xcconfig"; sourceTree = "<group>"; };
+		479CF187C62F62B043D61A8B /* Pods-Weather-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-tvOSTests/Pods-Weather-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		553E798963FE7542783D96E5 /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1184C6BF68A7618A0B4BF72 /* Pods-Weather-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Weather-tvOS/Pods-Weather-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BAAB0C5D3E908614F0672088 /* libPods-Weather-MoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather-MoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF253CBE85E381911CA1EB9 /* libPods-Weather-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD17DF2FED762EF344D53BBF /* Pods-Weather-MoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-MoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-Weather-MoviesTests/Pods-Weather-MoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5E6A79F070300615288183B /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5541E6B84B4041B484533B4D /* libPods-Movies-MoviesTests.a in Frameworks */,
+				5541E6B84B4041B484533B4D /* libPods-Weather-MoviesTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FC6FD78F5826903A73609A /* libPods-Movies.a in Frameworks */,
+				97FC6FD78F5826903A73609A /* libPods-Weather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Movies */ = {
+		13B07FAE1A68108700A75B9A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -102,7 +102,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = Movies;
+			name = Weather;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -110,10 +110,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				553E798963FE7542783D96E5 /* libPods-Movies.a */,
-				BAAB0C5D3E908614F0672088 /* libPods-Movies-MoviesTests.a */,
-				0AC0F0582159E35F0B098333 /* libPods-Movies-tvOS.a */,
-				BAF253CBE85E381911CA1EB9 /* libPods-Movies-tvOSTests.a */,
+				553E798963FE7542783D96E5 /* libPods-Weather.a */,
+				BAAB0C5D3E908614F0672088 /* libPods-Weather-MoviesTests.a */,
+				0AC0F0582159E35F0B098333 /* libPods-Weather-tvOS.a */,
+				BAF253CBE85E381911CA1EB9 /* libPods-Weather-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Movies */,
+				13B07FAE1A68108700A75B9A /* Weather */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MoviesTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -143,7 +143,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Movies.app */,
+				13B07F961A680F5B00A75B9A /* Weather.app */,
 				00E356EE1AD99517003FC87E /* MoviesTests.xctest */,
 			);
 			name = Products;
@@ -152,14 +152,14 @@
 		96AF3CFBDDFD31EB3421FC6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E5E6A79F070300615288183B /* Pods-Movies.debug.xcconfig */,
-				0B53B979E69F49545B064502 /* Pods-Movies.release.xcconfig */,
-				CD17DF2FED762EF344D53BBF /* Pods-Movies-MoviesTests.debug.xcconfig */,
-				44A4E6D03BB260BB2A9AD94C /* Pods-Movies-MoviesTests.release.xcconfig */,
-				B1184C6BF68A7618A0B4BF72 /* Pods-Movies-tvOS.debug.xcconfig */,
-				33D90D4EA6DC27C8E9594651 /* Pods-Movies-tvOS.release.xcconfig */,
-				301ACDC716AAF11EBD611087 /* Pods-Movies-tvOSTests.debug.xcconfig */,
-				479CF187C62F62B043D61A8B /* Pods-Movies-tvOSTests.release.xcconfig */,
+				E5E6A79F070300615288183B /* Pods-Weather.debug.xcconfig */,
+				0B53B979E69F49545B064502 /* Pods-Weather.release.xcconfig */,
+				CD17DF2FED762EF344D53BBF /* Pods-Weather-MoviesTests.debug.xcconfig */,
+				44A4E6D03BB260BB2A9AD94C /* Pods-Weather-MoviesTests.release.xcconfig */,
+				B1184C6BF68A7618A0B4BF72 /* Pods-Weather-tvOS.debug.xcconfig */,
+				33D90D4EA6DC27C8E9594651 /* Pods-Weather-tvOS.release.xcconfig */,
+				301ACDC716AAF11EBD611087 /* Pods-Weather-tvOSTests.debug.xcconfig */,
+				479CF187C62F62B043D61A8B /* Pods-Weather-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 			productReference = 00E356EE1AD99517003FC87E /* MoviesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Movies */ = {
+		13B07F861A680F5B00A75B9A /* Weather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Movies" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Weather" */;
 			buildPhases = (
 				7090CF8823D65649FD4E35AE /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -203,9 +203,9 @@
 			);
 			dependencies = (
 			);
-			name = Movies;
-			productName = Movies;
-			productReference = 13B07F961A680F5B00A75B9A /* Movies.app */;
+			name = Weather;
+			productName = Weather;
+			productReference = 13B07F961A680F5B00A75B9A /* Weather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Movies" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Weather" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,7 +240,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Movies */,
+				13B07F861A680F5B00A75B9A /* Weather */,
 				00E356ED1AD99517003FC87E /* MoviesTests */,
 			);
 		};
@@ -295,7 +295,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Movies-MoviesTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Weather-MoviesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -317,7 +317,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Movies-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Weather-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -330,7 +330,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Movies-MoviesTests/Pods-Movies-MoviesTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Weather-MoviesTests/Pods-Weather-MoviesTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -369,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Movies-MoviesTests/Pods-Movies-MoviesTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Weather-MoviesTests/Pods-Weather-MoviesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9E88595E4A6CAD139EB1B3D /* [CP] Copy Pods Resources */ = {
@@ -378,7 +378,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Movies/Pods-Movies-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -417,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Movies/Pods-Movies-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -464,7 +464,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Movies */;
+			target = 13B07F861A680F5B00A75B9A /* Weather */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -476,7 +476,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = Movies;
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,7 +484,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD17DF2FED762EF344D53BBF /* Pods-Movies-MoviesTests.debug.xcconfig */;
+			baseConfigurationReference = CD17DF2FED762EF344D53BBF /* Pods-Weather-MoviesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -503,13 +503,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movies.app/Movies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44A4E6D03BB260BB2A9AD94C /* Pods-Movies-MoviesTests.release.xcconfig */;
+			baseConfigurationReference = 44A4E6D03BB260BB2A9AD94C /* Pods-Weather-MoviesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -525,13 +525,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movies.app/Movies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E6A79F070300615288183B /* Pods-Movies.debug.xcconfig */;
+			baseConfigurationReference = E5E6A79F070300615288183B /* Pods-Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -542,15 +542,15 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.movies;
-				PRODUCT_NAME = Movies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.weather;
+				PRODUCT_NAME = Weather;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -559,21 +559,21 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B53B979E69F49545B064502 /* Pods-Movies.release.xcconfig */;
+			baseConfigurationReference = 0B53B979E69F49545B064502 /* Pods-Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44UGKK2J9U;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.movies;
-				PRODUCT_NAME = Movies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphael.weather;
+				PRODUCT_NAME = Weather;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -704,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Movies" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -713,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Movies" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

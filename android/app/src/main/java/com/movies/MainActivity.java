@@ -1,4 +1,4 @@
-package com.movies;
+package com.weather;
 
 import com.reactnativenavigation.NavigationActivity;
 
