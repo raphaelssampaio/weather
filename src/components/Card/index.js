@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, StyleSheet, Image } from 'react-native'
 import { Text, Button } from 'react-native-elements'
 
 import { colors } from '../../styles'
 import { REFRESH } from '../../constants'
+import Geolocation from '@react-native-community/geolocation'
 
 export default function Card({ city, data, picture }) {
+  const [position, setPosition] = useState([])
+
+  useEffect(() => {
+    Geolocation.getCurrentPosition(
+      (position) => {
+        const pos = JSON.stringify(position.coords)
+        setPosition(pos)
+      },
+      (error) => console.log('Error', JSON.stringify(error)),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+    )
+  }, [])
+
   return (
     <View style={styles.shadow}>
       <View style={styles.container}>
         <Image source={picture} style={styles.image} resizeMode="cover" />
         <Text style={styles.titleStyle}>{city}</Text>
         <Text style={styles.titleStyle}>Temperatura: {data}</Text>
-        <Text style={styles.titleStyle}>Clima: {data}</Text>
+        <Text style={styles.titleStyle}>Clima: {position}</Text>
 
         <Button
           title={REFRESH}
