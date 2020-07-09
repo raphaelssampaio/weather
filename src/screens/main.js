@@ -4,6 +4,13 @@ import { layout } from '../styles'
 import Card from '../components/Card'
 import DeviceInfo from 'react-native-device-info'
 import { temperature, sad } from '../assets'
+import {
+  APP_NAME,
+  RAPHAEL,
+  PLATFORM_BUILDERS,
+  SIMULATOR,
+  DOCUMENTATION,
+} from '../constants'
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -24,11 +31,9 @@ export default class Main extends React.Component {
     return (
       <View style={layout.default}>
         <View style={layout.defaultMargin}>
-          <Text style={layout.welcome}>
-            React Native Test Platform Builders
-          </Text>
-          <Text style={layout.welcome}>App Weather</Text>
-          <Text style={layout.raphael}>by Raphael Sampaio</Text>
+          <Text style={layout.welcome}>{PLATFORM_BUILDERS}</Text>
+          <Text style={layout.welcome}>{APP_NAME}</Text>
+          <Text style={layout.raphael}>{RAPHAEL}</Text>
           <Image
             source={temperature}
             style={layout.mainImage}
@@ -39,13 +44,13 @@ export default class Main extends React.Component {
           {!simulator && <Card />}
           {simulator && (
             <View>
-              <Text style={layout.welcome}>
-                I told you, it doesn't work on Simulator
-              </Text>
-              <Text style={layout.welcome}>
-                Read documentation for more details
-              </Text>
-              <Image source={sad} style={layout.image} resizeMode="contain" />
+              <Text style={layout.welcome}>{SIMULATOR}</Text>
+              <Text style={layout.welcome}>{DOCUMENTATION}</Text>
+              <Image
+                source={sad}
+                style={layout.imageSad}
+                resizeMode="contain"
+              />
             </View>
           )}
         </View>

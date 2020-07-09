@@ -44,6 +44,11 @@ export default {
     height: isIphoneX() ? 300 : 180,
     width: isIphoneX() ? 300 : 180,
   },
+  imageSad: {
+    height: 300,
+    width: 300,
+    alignSelf: 'center',
+  },
   mainImage: {
     alignSelf: 'center',
     height: 100,

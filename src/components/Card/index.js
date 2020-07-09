@@ -6,7 +6,14 @@ import Geolocation from '@react-native-community/geolocation'
 import { API_KEY } from 'react-native-dotenv'
 
 import { colors, layout } from '../../styles'
-import { REFRESH } from '../../constants'
+import {
+  REFRESH,
+  CITY,
+  TEMP,
+  CELCIUS,
+  WEATHER,
+  CONDITIONS,
+} from '../../constants'
 import { getImage, getCelsius } from '../../functions'
 
 export default function Card() {
@@ -89,13 +96,22 @@ export default function Card() {
               style={layout.image}
               resizeMode="contain"
             />
-            <Text style={layout.text}>City: {cityName}</Text>
             <Text style={layout.text}>
-              Temp: {getCelsius(weatherData.temperature)} °C
+              {CITY}
+              {cityName}
             </Text>
-            <Text style={layout.text}>Weather: {weatherData.main}</Text>
             <Text style={layout.text}>
-              Conditions: {weatherData.description}
+              {TEMP}
+              {getCelsius(weatherData.temperature)}
+              {CELCIUS}
+            </Text>
+            <Text style={layout.text}>
+              {WEATHER}
+              {weatherData.main}
+            </Text>
+            <Text style={layout.text}>
+              {CONDITIONS}
+              {weatherData.description}
             </Text>
             <Button
               title={REFRESH}
