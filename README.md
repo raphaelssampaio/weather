@@ -35,3 +35,15 @@
 
 ### App screenshot
 ![app](https://user-images.githubusercontent.com/19293727/86982851-9f308600-c160-11ea-99f0-243f3b4f28d4.jpeg)
+
+
+### Simulator bypass
+![Simulator Screen Shot - iPhone 11 - 2020-07-09 at 08 32 45](https://user-images.githubusercontent.com/19293727/87036059-9c657d80-c1c0-11ea-83cc-706e671218e4.png)
+
+If you want to test it on simulator you can follow these steps:
+- Build & run your app
+- At the top menu bar, you'll find Features -> Location -> Custom Location..(or you can choose to use others).
+- Set the Latitude & Longitude for the location.
+- You have to change some lines of code as well [here](https://github.com/raphaelssampaio/weather/blob/master/src/screens/main.js) change line 16 to false and remove useEffect (from line 18 to 22). This way you can run the app on simulator but some code are useless at this point.
+
+
