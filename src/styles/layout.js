@@ -42,6 +42,11 @@ export default {
     height: 300,
     width: 300,
   },
+  mainImage: {
+    alignSelf: 'center',
+    height: 100,
+    width: 100,
+  },
   loading: { marginTop: 50 },
   default: {
     flex: 1,

@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { layout } from '../styles'
 import Card from '../components/Card'
+import { temperature } from '../assets'
 
 export default class Main extends React.Component {
   render() {
@@ -13,6 +14,11 @@ export default class Main extends React.Component {
           </Text>
           <Text style={layout.welcome}>App Weather</Text>
           <Text style={layout.raphael}>by Raphael Sampaio</Text>
+          <Image
+            source={temperature}
+            style={layout.mainImage}
+            resizeMode="contain"
+          />
         </View>
         <View style={layout.containerMain}>
           <Card />
