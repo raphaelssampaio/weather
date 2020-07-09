@@ -28,7 +28,7 @@
 
 ### Important
 
-- Test it on iphone X or greater
+- Test it on iPhone 8 or greater for best results
 - If you test on small phones it'll break the layout
 - Don't test it on android, maybe it'll break the layout
 - Don't test it on Simulator, it doesn't work because simulator can't get geolocation
