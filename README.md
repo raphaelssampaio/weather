@@ -1,4 +1,5 @@
 ## Welcome to Weather App!
+<img width="416" alt="temperatura" src="https://user-images.githubusercontent.com/19293727/86984455-0a7c5700-c165-11ea-832d-aea63c764b7d.png">
 
 ### Requirements
 
@@ -25,5 +26,12 @@
 - nano .env
 - paste this code: `API_KEY = 2cd56a471ef87bcdbb8729637e791c63`
 
+### Important
+
+- Test it on iphone X or greater
+- If you test on small phones it'll break the layout
+- Don't test it on android, maybe it'll break the layout
+- Don't test it on Simulator, it doesn't work because simulator can't get geolocation
+
 ### App screenshot
-![app](https://user-images.githubusercontent.com/19293727/86982500-c9ce0f00-c15f-11ea-979e-b13fc83766e6.jpeg)
+![app](https://user-images.githubusercontent.com/19293727/86982851-9f308600-c160-11ea-99f0-243f3b4f28d4.jpeg)
