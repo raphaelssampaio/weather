@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, Text, Image } from 'react-native'
 import { layout } from '../styles'
 import Card from '../components/Card'
@@ -12,49 +12,37 @@ import {
   DOCUMENTATION,
 } from '../constants'
 
-export default class Main extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      simulator: true,
-    }
-  }
+export default function Main() {
+  const [isSimulator, setIsSimulator] = useState(true)
 
-  componentDidMount() {
+  useEffect(() => {
     DeviceInfo.isEmulator().then((isEmulator) => {
-      this.setState({ simulator: isEmulator })
+      setIsSimulator(isEmulator)
     })
-  }
+  }, [])
 
-  render() {
-    const { simulator } = this.state
-    return (
-      <View style={layout.default}>
-        <View style={layout.defaultMargin}>
-          <Text style={layout.welcome}>{PLATFORM_BUILDERS}</Text>
-          <Text style={layout.welcome}>{APP_NAME}</Text>
-          <Text style={layout.raphael}>{RAPHAEL}</Text>
-          <Image
-            source={temperature}
-            style={layout.mainImage}
-            resizeMode="contain"
-          />
-        </View>
-        <View style={layout.containerMain}>
-          {!simulator && <Card />}
-          {simulator && (
-            <View>
-              <Text style={layout.welcome}>{SIMULATOR}</Text>
-              <Text style={layout.welcome}>{DOCUMENTATION}</Text>
-              <Image
-                source={sad}
-                style={layout.imageSad}
-                resizeMode="contain"
-              />
-            </View>
-          )}
-        </View>
+  return (
+    <View style={layout.default}>
+      <View style={layout.defaultMargin}>
+        <Text style={layout.welcome}>{PLATFORM_BUILDERS}</Text>
+        <Text style={layout.welcome}>{APP_NAME}</Text>
+        <Text style={layout.raphael}>{RAPHAEL}</Text>
+        <Image
+          source={temperature}
+          style={layout.mainImage}
+          resizeMode="contain"
+        />
       </View>
-    )
-  }
+      <View style={layout.containerMain}>
+        {!isSimulator && <Card />}
+        {isSimulator && (
+          <View>
+            <Text style={layout.welcome}>{SIMULATOR}</Text>
+            <Text style={layout.welcome}>{DOCUMENTATION}</Text>
+            <Image source={sad} style={layout.imageSad} resizeMode="contain" />
+          </View>
+        )}
+      </View>
+    </View>
+  )
 }
