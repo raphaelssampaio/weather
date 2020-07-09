@@ -12,7 +12,7 @@ import { getImage, getCelsius } from '../../functions'
 export default function Card() {
   const [position, setPosition] = useState([])
   const [cityName, setCityName] = useState('')
-  const [weatherData, setWeatherData] = useState('')
+  const [weatherData, setWeatherData] = useState([])
   const [weatherImage, setWeatherImage] = useState(null)
   const [loading, setLoading] = useState(true)
 
