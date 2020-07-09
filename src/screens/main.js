@@ -2,9 +2,14 @@ import React from 'react'
 import { View, Text, Image } from 'react-native'
 import { layout } from '../styles'
 import Card from '../components/Card'
-import { temperature } from '../assets'
+import DeviceInfo from 'react-native-device-info'
+import { temperature, sad } from '../assets'
 
 export default class Main extends React.Component {
+  componentDidMount() {
+    DeviceInfo.isEmulator().then((isEmulator) => (this.simulator = isEmulator))
+  }
+
   render() {
     return (
       <View style={layout.default}>
@@ -21,7 +26,18 @@ export default class Main extends React.Component {
           />
         </View>
         <View style={layout.containerMain}>
-          <Card />
+          {this.simulator && <Card />}
+          {!this.simulator && (
+            <View>
+              <Text style={layout.welcome}>
+                I told you, it doesn't work on Simulator
+              </Text>
+              <Text style={layout.welcome}>
+                Read documentation for more details
+              </Text>
+              <Image source={sad} style={layout.image} resizeMode="contain" />
+            </View>
+          )}
         </View>
       </View>
     )
