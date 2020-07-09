@@ -26,4 +26,4 @@
 - paste this code: `API_KEY = 2cd56a471ef87bcdbb8729637e791c63`
 
 ### App screenshot
-![app](https://user-images.githubusercontent.com/19293727/86982500-c9ce0f00-c15f-11ea-979e-b13fc83766e6.jpeg)
+![app](https://user-images.githubusercontent.com/19293727/86982851-9f308600-c160-11ea-99f0-243f3b4f28d4.jpeg)
