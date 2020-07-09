@@ -6,11 +6,21 @@ import DeviceInfo from 'react-native-device-info'
 import { temperature, sad } from '../assets'
 
 export default class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      simulator: true,
+    }
+  }
+
   componentDidMount() {
-    DeviceInfo.isEmulator().then((isEmulator) => (this.simulator = isEmulator))
+    DeviceInfo.isEmulator().then((isEmulator) => {
+      this.setState({ simulator: isEmulator })
+    })
   }
 
   render() {
+    const { simulator } = this.state
     return (
       <View style={layout.default}>
         <View style={layout.defaultMargin}>
@@ -26,8 +36,8 @@ export default class Main extends React.Component {
           />
         </View>
         <View style={layout.containerMain}>
-          {this.simulator && <Card />}
-          {!this.simulator && (
+          {!simulator && <Card />}
+          {simulator && (
             <View>
               <Text style={layout.welcome}>
                 I told you, it doesn't work on Simulator
