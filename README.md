@@ -1,4 +1,5 @@
 ## Welcome to Weather App!
+<img width="416" alt="temperatura" src="https://user-images.githubusercontent.com/19293727/86984455-0a7c5700-c165-11ea-832d-aea63c764b7d.png">
 
 ### Requirements
 
