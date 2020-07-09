@@ -1,82 +1,112 @@
 import React, { useState, useEffect } from 'react'
-import { View, StyleSheet, Image } from 'react-native'
+import { View, Image, ActivityIndicator } from 'react-native'
 import { Text, Button } from 'react-native-elements'
-
-import { colors } from '../../styles'
-import { REFRESH } from '../../constants'
+import axios from 'axios'
 import Geolocation from '@react-native-community/geolocation'
+import { API_KEY } from 'react-native-dotenv'
 
-export default function Card({ city, data, picture }) {
+import { colors, layout } from '../../styles'
+import { REFRESH } from '../../constants'
+import { getImage, getCelsius } from '../../functions'
+
+export default function Card() {
   const [position, setPosition] = useState([])
+  const [cityName, setCityName] = useState('')
+  const [weatherData, setWeatherData] = useState('')
+  const [weatherImage, setWeatherImage] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
+  function getPosition() {
+    setLoading(true)
     Geolocation.getCurrentPosition(
       (position) => {
-        const pos = JSON.stringify(position.coords)
+        const pos = position.coords
         setPosition(pos)
       },
       (error) => console.log('Error', JSON.stringify(error)),
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
     )
+  }
+
+  useEffect(() => {
+    getPosition()
   }, [])
 
-  return (
-    <View style={styles.shadow}>
-      <View style={styles.container}>
-        <Image source={picture} style={styles.image} resizeMode="cover" />
-        <Text style={styles.titleStyle}>{city}</Text>
-        <Text style={styles.titleStyle}>Temperatura: {data}</Text>
-        <Text style={styles.titleStyle}>Clima: {position}</Text>
+  useEffect(() => {
+    const fetchCityName = async () => {
+      const { latitude, longitude } = position
+      if (latitude !== undefined) {
+        const response = await axios.get(
+          `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`,
+        )
+        setCityName(response.data.city)
+      }
+    }
+    fetchCityName()
+  }, [position])
 
-        <Button
-          title={REFRESH}
-          titleStyle={styles.buttonTitleStyle}
-          buttonStyle={styles.buttonStyle}
-          containerStyle={styles.buttonContainerStyle}
-        />
-      </View>
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      const { latitude, longitude } = position
+      if (latitude !== undefined) {
+        const response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&
+          exclude=hourly,daily&appid=${API_KEY}`,
+        )
+
+        setWeatherData({
+          temperature: response.data.current.temp,
+          main: response.data.current.weather[0].main,
+          description: response.data.current.weather[0].description,
+        })
+      }
+    }
+    fetchWeatherData()
+    setLoading(false)
+  }, [position])
+
+  useEffect(() => {
+    setWeatherImage(getImage(weatherData))
+  }, [weatherData])
+
+  return (
+    <View style={layout.shadow}>
+      {loading && (
+        <>
+          <Text style={layout.text}>Loading ...</Text>
+          <ActivityIndicator
+            size="large"
+            color={colors.mainBlue}
+            style={layout.loading}
+          />
+        </>
+      )}
+      {!loading && (
+        <View style={layout.container}>
+          <>
+            <Image
+              source={weatherImage}
+              style={layout.image}
+              resizeMode="contain"
+            />
+            <Text style={layout.text}>City: {cityName}</Text>
+            <Text style={layout.text}>
+              Temp: {getCelsius(weatherData.temperature)} °C
+            </Text>
+            <Text style={layout.text}>Weather: {weatherData.main}</Text>
+            <Text style={layout.text}>
+              Conditions: {weatherData.description}
+            </Text>
+            <Button
+              title={REFRESH}
+              titleStyle={layout.buttonTitleStyle}
+              buttonStyle={layout.buttonStyle}
+              containerStyle={layout.buttonContainerStyle}
+              onPress={() => getPosition()}
+            />
+          </>
+        </View>
+      )}
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowOffset: { width: 1, height: 1 },
-    shadowColor: colors.mainBlue,
-    shadowOpacity: 1,
-    elevation: 1,
-    backgroundColor: colors.transparent,
-    marginHorizontal: 5,
-  },
-  container: {
-    alignItems: 'center',
-    borderRadius: 20,
-    minWidth: 300,
-    minHeight: 500,
-    backgroundColor: colors.cardBackground,
-  },
-  titleStyle: {
-    fontWeight: 'bold',
-    color: colors.white,
-    padding: 15,
-    fontSize: 20,
-    alignSelf: 'flex-start',
-  },
-  buttonTitleStyle: {
-    fontWeight: 'bold',
-    color: colors.white,
-  },
-  buttonStyle: {
-    backgroundColor: colors.mainBlue,
-    alignItems: 'center',
-    borderRadius: 10,
-    marginVertical: 5,
-  },
-  buttonContainerStyle: {
-    width: '90%',
-  },
-  image: {
-    height: 180,
-    width: 180,
-  },
-})
