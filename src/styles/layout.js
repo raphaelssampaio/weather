@@ -1,3 +1,4 @@
+import { isIphoneX } from 'react-native-iphone-x-helper'
 import { colors } from './'
 
 export default {
@@ -14,7 +15,7 @@ export default {
     alignItems: 'center',
     borderRadius: 20,
     minWidth: 350,
-    minHeight: 500,
+    minHeight: isIphoneX() ? 500 : 300,
     backgroundColor: colors.cardBackground,
   },
   text: {
@@ -37,10 +38,11 @@ export default {
   },
   buttonContainerStyle: {
     width: '95%',
+    marginBottom: 10,
   },
   image: {
-    height: 300,
-    width: 300,
+    height: isIphoneX() ? 300 : 180,
+    width: isIphoneX() ? 300 : 180,
   },
   mainImage: {
     alignSelf: 'center',
